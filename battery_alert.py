@@ -2,6 +2,7 @@ import time
 import psutil
 import os
 from plyer import notification
+notification.notify(title="Battery Alert", message="Battery Alert has started")
 while True:
 	battery = psutil.sensors_battery()
 	if battery.power_plugged == False:
@@ -12,6 +13,6 @@ while True:
 		notification.notify(title="Battery Alert", message="Battery Charged Over: "+str(battery.percent)+"%. Unplug immediately!!!")
 		os.system("msg * Battery Charge: " + str(battery.percent) + "% !!! Disconnect the power cable")
 		break
-	else:
-		print("battery.percent: ", battery.percent, "%. You are safe")
+	# else:
+	# 	print("battery.percent: ", battery.percent, "%. You are safe")
 	time.sleep(120)

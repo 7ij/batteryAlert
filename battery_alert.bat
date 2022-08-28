@@ -1,0 +1,1 @@
+python C:\Users\Nayeem\OneDrive\Documents\dev\batteryAlert\battery_alert.py
